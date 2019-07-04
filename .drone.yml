@@ -4,10 +4,9 @@ name: default
 
 steps:
 - name: build
-  image: ubuntu:18.04
-  privileged: true
+  image: kura2i/drone-test-img:latest
+  privileged: false
   commands:
-    - apt-get install libgetopt-complete-perl 
     - ./install.sh /usr/local/
     - echo "hoge" | /usr/local/bin/cowsay
     
