@@ -6,6 +6,7 @@ steps:
 - name: build
   image: ubuntu:18.04
   commands:
+    - sudo apt-get install libgetopt-complete-perl 
     - ./install.sh /usr/local/
     - echo "hoge" | /usr/local/bin/cowsay
     
