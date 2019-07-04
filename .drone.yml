@@ -5,8 +5,9 @@ name: default
 steps:
 - name: build
   image: ubuntu:18.04
+  privileged: true
   commands:
-    - sudo apt-get install libgetopt-complete-perl 
+    - apt-get install libgetopt-complete-perl 
     - ./install.sh /usr/local/
     - echo "hoge" | /usr/local/bin/cowsay
     
