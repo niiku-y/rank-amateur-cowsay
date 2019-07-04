@@ -1,0 +1,11 @@
+# .drone.yml
+kind: pipeline
+name: default
+
+steps:
+- name: build
+  image: ubuntu:18.04
+  commands:
+    - install.sh /usr/local/
+    - echo "hoge" | /usr/local/bin/cowsay
+    
